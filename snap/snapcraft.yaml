@@ -1,6 +1,6 @@
 ---
 
-name: k9s-nsg
+name: k9s-totoland
 base: core20
 adopt-info: detect-version
 summary: K9s - Kubernetes CLI To Manage Your Clusters In Style!
@@ -28,8 +28,8 @@ plugs:
       - $HOME/.kube
 
 apps:
-  k9s-nsg:
-    command: bin/k9s-nsg
+  k9s-totoland:
+    command: bin/k9s-totoland
     plugs:
       - kube-config
       - network
@@ -65,7 +65,7 @@ parts:
     override-build: |
       install kubectl -D $SNAPCRAFT_PART_INSTALL/bin/kubectl
 
-  k9s-nsg:
+  k9s-totoland:
     plugin: dump
     source: src
     stage-packages:
